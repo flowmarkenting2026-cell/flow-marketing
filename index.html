@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flow Marketing | Estratégia que conecta e vende</title>
+
+    <meta
+        name="description"
+        content="A Flow Marketing transforma o Instagram da sua empresa em uma ferramenta estratégica para atrair, conectar e conquistar clientes."
+    >
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #050505;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =========================
+           VARIÁVEIS
+        ========================= */
+
+        :root {
+            --pink: #ff2f92;
+            --pink-light: #ff72b5;
+            --black: #050505;
+            --dark: #0d0d0d;
+            --gray: #a7a7a7;
+            --white: #ffffff;
+            --border: rgba(255,255,255,0.10);
+        }
+
+
+        /* =========================
+           CONTAINER
+        ========================= */
+
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+
+        /* =========================
+           BOTÕES
+        ========================= */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            background: var(--pink);
+            color: white;
+
+            padding: 15px 26px;
+            border-radius: 50px;
+
+            font-weight: 700;
+            font-size: 15px;
+
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 47, 146, 0.35);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--pink);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: var(--pink);
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            z-index: 1000;
+
+            background: rgba(5,5,5,0.85);
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav {
+            height: 78px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--pink);
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            color: #d5d5d5;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--pink);
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding: 150px 0 90px;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 600px;
+            height: 600px;
+
+            background: var(--pink);
+
+            filter: blur(180px);
+            opacity: 0.13;
+
+            top: -250px;
+            right: -200px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+
+            align-items: center;
+
+            gap: 70px;
+        }
+
+        .tag {
+            display: inline-block;
+
+            color: var(--pink-light);
+
+            font-weight: 700;
+            font-size: 13px;
+
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 76px);
+            line-height: 1.02;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--pink);
+        }
+
+        .hero p {
+            color: var(--gray);
+
+            font-size: 18px;
+
+            max-width: 600px;
+
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+
+        /* CARD VISUAL */
+
+        .hero-card {
+            min-height: 470px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,47,146,0.18),
+                    rgba(255,255,255,0.02)
+                );
+
+            padding: 35px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .hero-card::after {
+            content: "";
+
+            position: absolute;
+
+            width: 250px;
+            height: 250px;
+
+            background: var(--pink);
+
+            border-radius: 50%;
+
+            filter: blur(100px);
+
+            right: -100px;
+            bottom: -100px;
+
+            opacity: 0.25;
+        }
+
+        .mockup {
+            background: #111;
+            border: 1px solid rgba(255,255,255,0.12);
+
+            border-radius: 22px;
+
+            padding: 22px;
+
+            position: absolute;
+
+            width: 78%;
+
+            top: 55px;
+            left: 11%;
+
+            box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+        }
+
+        .mockup-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin-bottom: 25px;
+        }
+
+        .mockup-logo {
+            font-weight: 800;
+        }
+
+        .mockup-logo span {
+            color: var(--pink);
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+
+            background: var(--pink);
+
+            border-radius: 50%;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 10px;
+
+            margin-bottom: 20px;
+        }
+
+        .stat {
+            background: #191919;
+
+            border-radius: 12px;
+
+            padding: 15px;
+
+            text-align: center;
+        }
+
+        .stat strong {
+            display: block;
+
+            font-size: 20px;
+        }
+
+        .stat small {
+            color: var(--gray);
+        }
+
+        .fake-posts {
+            display: grid;
+
+            grid-template-columns: repeat(2,1fr);
+
+            gap: 10px;
+        }
+
+        .fake-post {
+            height: 110px;
+
+            border-radius: 12px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff2f92,
+                    #191919
+                );
+        }
+
+        .fake-post:nth-child(2) {
+            background:
+                linear-gradient(
+                    135deg,
+                    #191919,
+                    #ff72b5
+                );
+        }
+
+
+        /* =========================
+           SEÇÕES
+        ========================= */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            max-width: 700px;
+
+            margin-bottom: 55px;
+        }
+
+        .section-label {
+            color: var(--pink);
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            font-size: 12px;
+
+            margin-bottom: 12px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(34px, 5vw, 52px);
+
+            line-height: 1.08;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 18px;
+        }
+
+        .section-header p {
+            color: var(--gray);
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           PROBLEMA
+        ========================= */
+
+        .problem {
+            background: #090909;
+        }
+
+        .problem-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+        .problem-card {
+            padding: 30px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            background: #0f0f0f;
+
+            transition: 0.3s;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+
+            border-color: rgba(255,47,146,0.5);
+        }
+
+        .problem-number {
+            color: var(--pink);
+
+            font-size: 14px;
+
+            font-weight: 900;
+
+            margin-bottom: 30px;
+        }
+
+        .problem-card h3 {
+            margin-bottom: 10px;
+
+            font-size: 19px;
+        }
+
+        .problem-card p {
+            color: var(--gray);
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           SOLUÇÃO
+        ========================= */
+
+        .solution-grid {
+            display: grid;
+
+            grid-template-columns: 0.8fr 1.2fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+        .solution-big {
+            font-size: clamp(70px, 10vw, 130px);
+
+            font-weight: 900;
+
+            color: var(--pink);
+
+            line-height: 0.8;
+        }
+
+        .solution-list {
+            display: grid;
+
+            gap: 18px;
+        }
+
+        .solution-item {
+            display: flex;
+
+            gap: 20px;
+
+            padding: 25px 0;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .check {
+            width: 35px;
+            height: 35px;
+
+            min-width: 35px;
+
+            border-radius: 50%;
+
+            background: var(--pink);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-weight: 900;
+        }
+
+        .solution-item h3 {
+            margin-bottom: 5px;
+        }
+
+        .solution-item p {
+            color: var(--gray);
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           COMO FUNCIONA
+        ========================= */
+
+        .steps {
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            gap: 15px;
+        }
+
+        .step {
+            background: #0e0e0e;
+
+            border: 1px solid var(--border);
+
+            border-radius: 22px;
+
+            padding: 30px;
+        }
+
+        .step-number {
+            font-size: 42px;
+
+            color: var(--pink);
+
+            font-weight: 900;
+
+            margin-bottom: 35px;
+        }
+
+        .step h3 {
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: var(--gray);
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           SERVIÇOS
+        ========================= */
+
+        .services {
+            background: #090909;
+        }
+
+        .services-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            gap: 15px;
+        }
+
+        .service {
+            min-height: 230px;
+
+            padding: 30px;
+
+            border-radius: 22px;
+
+            border: 1px solid var(--border);
+
+            background: #101010;
+        }
+
+        .service-icon {
+            font-size: 30px;
+
+            margin-bottom: 30px;
+        }
+
+        .service h3 {
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            color: var(--gray);
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           PLANOS
+        ========================= */
+
+        .plans {
+            background: #050505;
+        }
+
+        .plans-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3,1fr);
+
+            gap: 20px;
+        }
+
+        .plan {
+            padding: 35px;
+
+            border-radius: 25px;
+
+            border: 1px solid var(--border);
+
+            background: #0d0d0d;
+
+            position: relative;
+        }
+
+        .plan.featured {
+            border: 1px solid var(--pink);
+
+            transform: scale(1.03);
+        }
+
+        .popular {
+            position: absolute;
+
+            top: -13px;
+            left: 30px;
+
+            background: var(--pink);
+
+            padding: 5px 14px;
+
+            border-radius: 30px;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+        }
+
+        .plan h3 {
+            font-size: 24px;
+
+            margin-bottom: 10px;
+        }
+
+        .plan-description {
+            color: var(--gray);
+
+            font-size: 14px;
+
+            min-height: 45px;
+        }
+
+        .price {
+            margin: 25px 0;
+
+            font-size: 42px;
+
+            font-weight: 900;
+        }
+
+        .price small {
+            font-size: 14px;
+
+            color: var(--gray);
+
+            font-weight: normal;
+        }
+
+        .features {
+            list-style: none;
+
+            margin-bottom: 30px;
+        }
+
+        .features li {
+            padding: 10px 0;
+
+            border-bottom: 1px solid var(--border);
+
+            font-size: 14px;
+        }
+
+        .features li::before {
+            content: "✓";
+
+            color: var(--pink);
+
+            font-weight: bold;
+
+            margin-right: 10px;
+        }
+
+        .plan .btn {
+            width: 100%;
+        }
+
+
+        /* =========================
+           DIFERENCIAL
+        ========================= */
+
+        .difference {
+            background: #090909;
+        }
+
+        .difference-box {
+            border: 1px solid var(--border);
+
+            border-radius: 30px;
+
+            padding: 60px;
+
+            background:
+                radial-gradient(
+                    circle at right,
+                    rgba(255,47,146,0.15),
+                    transparent 45%
+                );
+        }
+
+        .difference-box h2 {
+            font-size: clamp(35px,5vw,58px);
+
+            max-width: 750px;
+
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+        }
+
+        .difference-box h2 span {
+            color: var(--pink);
+        }
+
+        .difference-box p {
+            max-width: 650px;
+
+            color: var(--gray);
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            padding: 120px 0;
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            background: var(--pink);
+
+            filter: blur(180px);
+
+            opacity: 0.12;
+
+            left: 50%;
+            top: 30%;
+
+            transform: translate(-50%,-50%);
+        }
+
+        .cta-content {
+            position: relative;
+        }
+
+        .cta h2 {
+            font-size: clamp(38px,6vw,70px);
+
+            line-height: 1;
+
+            max-width: 850px;
+
+            margin: 0 auto 25px;
+
+            letter-spacing: -2px;
+        }
+
+        .cta h2 span {
+            color: var(--pink);
+        }
+
+        .cta p {
+            color: var(--gray);
+
+            max-width: 600px;
+
+            margin: 0 auto 35px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid var(--border);
+
+            padding: 35px 0;
+        }
+
+        .footer-content {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+        .footer-text {
+            color: var(--gray);
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            nav {
+                display: none;
+            }
+
+            .hero-grid,
+            .solution-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .problem-grid,
+            .steps,
+            .services-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .plans-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .plan.featured {
+                transform: none;
+            }
+
+            .hero-card {
+                min-height: 400px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 75px 0;
+            }
+
+            .hero {
+                padding-top: 130px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+
+            .problem-grid,
+            .steps,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .difference-box {
+                padding: 35px 25px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+
+                gap: 10px;
+
+                text-align: center;
+            }
+
+            .mockup {
+                width: 86%;
+
+                left: 7%;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="container nav">
+
+        <a href="#" class="logo">
+            Flow<span>.</span>
+        </a>
+
+        <nav>
+            <a href="#problema">O problema</a>
+            <a href="#solucao">A Flow</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#planos">Planos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <a
+            href="https://wa.me/5500000000000"
+            class="btn"
+            target="_blank"
+        >
+            Falar com a Flow
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="container hero-grid">
+
+        <div>
+
+            <div class="tag">
+                Flow Marketing
+            </div>
+
+            <h1>
+                Seu Instagram pode
+                <span>vender mais.</span>
+            </h1>
+
+            <p>
+                A Flow Marketing transforma sua presença digital
+                em uma estratégia para atrair, conectar e conquistar
+                os clientes certos.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="https://wa.me/5500000000000"
+                    class="btn"
+                    target="_blank"
+                >
+                    Quero transformar meu Instagram →
+                </a>
+
+                <a
+                    href="#planos"
+                    class="btn btn-outline"
+                >
+                    Conhecer planos
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="mockup">
+
+                <div class="mockup-top">
+
+                    <div class="mockup-logo">
+                        Flow<span>.</span>
+                    </div>
+
+                    <div class="dot"></div>
+
+                </div>
+
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <strong>+38%</strong>
+                        <small>Alcance</small>
+                    </div>
+
+                    <div class="stat">
+                        <strong>+52%</strong>
+                        <small>Interações</small>
+                    </div>
+
+                    <div class="stat">
+                        <strong>+27%</strong>
+                        <small>Leads</small>
+                    </div>
+
+                </div>
+
+
+                <div class="fake-posts">
+
+                    <div class="fake-post"></div>
+
+                    <div class="fake-post"></div>
+
+                    <div class="fake-post"></div>
+
+                    <div class="fake-post"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROBLEMA
+========================= -->
+
+<section class="problem" id="problema">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Talvez esse seja o seu problema
+            </div>
+
+            <h2>
+                Ter um Instagram bonito não é suficiente.
+            </h2>
+
+            <p>
+                Seu perfil precisa ter estratégia por trás de cada
+                conteúdo.
+            </p>
+
+        </div>
+
+
+        <div class="problem-grid">
+
+            <div class="problem-card">
+
+                <div class="problem-number">01</div>
+
+                <h3>
+                    Você posta, mas quase ninguém interage.
+                </h3>
+
+                <p>
+                    O conteúdo existe, mas não está criando conexão
+                    com as pessoas certas.
+                </p>
+
+            </div>
+
+
+            <div class="problem-card">
+
+                <div class="problem-number">02</div>
+
+                <h3>
+                    Seu perfil recebe visitas, mas poucos chamam.
+                </h3>
+
+                <p>
+                    Falta uma estratégia clara para transformar
+                    atenção em oportunidade.
+                </p>
+
+            </div>
+
+
+            <div class="problem-card">
+
+                <div class="problem-number">03</div>
+
+                <h3>
+                    Você não sabe o que postar.
+                </h3>
+
+                <p>
+                    Cada semana começa do zero e o conteúdo fica
+                    sem direção.
+                </p>
+
+            </div>
+
+
+            <div class="problem-card">
+
+                <div class="problem-number">04</div>
+
+                <h3>
+                    Cada publicação parece falar uma coisa.
+                </h3>
+
+                <p>
+                    Sem posicionamento, sua marca perde força e
+                    reconhecimento.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SOLUÇÃO
+========================= -->
+
+<section id="solucao">
+
+    <div class="container solution-grid">
+
+        <div>
+
+            <div class="solution-big">
+                FLOW
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <div class="section-header">
+
+                <div class="section-label">
+                    A solução
+                </div>
+
+                <h2>
+                    Não é sobre postar mais.
+                    É sobre postar com propósito.
+                </h2>
+
+                <p>
+                    A Flow cuida da estratégia por trás da sua
+                    presença digital.
+                </p>
+
+            </div>
+
+
+            <div class="solution-list">
+
+                <div class="solution-item">
+
+                    <div class="check">✓</div>
+
+                    <div>
+
+                        <h3>
+                            Estratégia
+                        </h3>
+
+                        <p>
+                            Planejamos o conteúdo de acordo com
+                            seus objetivos e público.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="solution-item">
+
+                    <div class="check">✓</div>
+
+                    <div>
+
+                        <h3>
+                            Conteúdo
+                        </h3>
+
+                        <p>
+                            Criamos conteúdos pensados para
+                            informar, conectar e vender.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="solution-item">
+
+                    <div class="check">✓</div>
+
+                    <div>
+
+                        <h3>
+                            Posicionamento
+                        </h3>
+
+                        <p>
+                            Organizamos sua comunicação para sua
+                            empresa ser lembrada.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="solution-item">
+
+                    <div class="check">✓</div>
+
+                    <div>
+
+                        <h3>
+                            Acompanhamento
+                        </h3>
+
+                        <p>
+                            Analisamos os resultados e identificamos
+                            oportunidades de melhoria.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     COMO FUNCIONA
+========================= -->
+
+<section class="problem">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Nosso processo
+            </div>
+
+            <h2>
+                Do diagnóstico à estratégia.
+            </h2>
+
+            <p>
+                Um processo simples, organizado e pensado para
+                o seu negócio.
+            </p>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3>
+                    Diagnóstico
+                </h3>
+
+                <p>
+                    Entendemos sua empresa, público, objetivos
+                    e cenário atual.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>
+                    Planejamento
+                </h3>
+
+                <p>
+                    Definimos pilares, temas e estratégias
+                    para o conteúdo.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>
+                    Produção
+                </h3>
+
+                <p>
+                    Transformamos a estratégia em conteúdos
+                    prontos para sua marca.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <h3>
+                    Análise
+                </h3>
+
+                <p>
+                    Acompanhamos os resultados para melhorar
+                    continuamente a estratégia.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVIÇOS
+========================= -->
+
+<section id="servicos" class="services">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                O que fazemos
+            </div>
+
+            <h2>
+                Estratégia, conteúdo e crescimento.
+            </h2>
+
+        </div>
+
+
+        <div class="services-grid">
+
+            <div class="service">
+
+                <div class="service-icon">✦</div>
+
+                <h3>
+                    Gestão de Instagram
+                </h3>
+
+                <p>
+                    Cuidamos da presença da sua marca nas redes
+                    sociais de forma estratégica.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-icon">◉</div>
+
+                <h3>
+                    Planejamento de conteúdo
+                </h3>
+
+                <p>
+                    Conteúdos planejados para cada objetivo
+                    da sua comunicação.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-icon">↗</div>
+
+                <h3>
+                    Estratégias para atrair clientes
+                </h3>
+
+                <p>
+                    Criamos caminhos para transformar atenção
+                    em oportunidades comerciais.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-icon">◎</div>
+
+                <h3>
+                    Tráfego pago
+                </h3>
+
+                <p>
+                    Campanhas pensadas para ampliar o alcance
+                    e gerar oportunidades para sua empresa.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PLANOS
+========================= -->
+
+<section id="planos" class="plans">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Escolha sua estratégia
+            </div>
+
+            <h2>
+                Um plano para cada momento do seu negócio.
+            </h2>
+
+            <p>
+                Encontre a estrutura que faz sentido para sua empresa.
+            </p>
+
+        </div>
+
+
+        <div class="plans-grid">
+
+
+            <!-- PLANO 350 -->
+
+            <div class="plan">
+
+                <h3>
+                    Start
+                </h3>
+
+                <p class="plan-description">
+                    Para empresas que precisam começar a organizar
+                    sua presença digital.
+                </p>
+
+                <div class="price">
+                    R$ 350
+                    <small>/mês</small>
+                </div>
+
+
+                <ul class="features">
+
+                    <li>
+                        Gestão de Instagram
+                    </li>
+
+                    <li>
+                        8 carrosséis
+                    </li>
+
+                    <li>
+                        4 Reels
+                    </li>
+
+                    <li>
+                        12 Stories
+                    </li>
+
+                    <li>
+                        Planejamento mensal
+                    </li>
+
+                    <li>
+                        Relatório simples
+                    </li>
+
+                </ul>
+
+
+                <a
+                    href="https://wa.me/5500000000000?text=Olá!%20Quero%20conhecer%20o%20plano%20Start%20da%20Flow."
+                    class="btn"
+                    target="_blank"
+                >
+                    Quero esse plano
+                </a>
+
+            </div>
+
+
+
+            <!-- PLANO 750 -->
+
+            <div class="plan featured">
+
+                <div class="popular">
+                    Mais estratégico
+                </div>
+
+                <h3>
+                    Growth
+                </h3>
+
+                <p class="plan-description">
+                    Para empresas que querem crescer e fortalecer
+                    o posicionamento digital.
+                </p>
+
+                <div class="price">
+                    R$ 750
+                    <small>/mês</small>
+                </div>
+
+
+                <ul class="features">
+
+                    <li>
+                        Gestão estratégica
+                    </li>
+
+                    <li>
+                        Mais conteúdos estratégicos
+                    </li>
+
+                    <li>
+                        Reels
+                    </li>
+
+                    <li>
+                        Stories
+                    </li>
+
+                    <li>
+                        Planejamento mensal
+                    </li>
+
+                    <li>
+                        Análise de métricas
+                    </li>
+
+                </ul>
+
+
+                <a
+                    href="https://wa.me/5500000000000?text=Olá!%20Quero%20conhecer%20o%20plano%20Growth%20da%20Flow."
+                    class="btn"
+                    target="_blank"
+                >
+                    Quero esse plano
+                </a>
+
+            </div>
+
+
+
+            <!-- PLANO 1500 -->
+
+            <div class="plan">
+
+                <h3>
+                    Premium
+                </h3>
+
+                <p class="plan-description">
+                    Para empresas que querem uma presença digital
+                    mais completa e estratégica.
+                </p>
+
+                <div class="price">
+                    R$ 1.500
+                    <small>/mês</small>
+                </div>
+
+
+                <ul class="features">
+
+                    <li>
+                        Gestão completa
+                    </li>
+
+                    <li>
+                        Conteúdo estratégico
+                    </li>
+
+                    <li>
+                        Reels
+                    </li>
+
+                    <li>
+                        Stories
+                    </li>
+
+                    <li>
+                        Planejamento estratégico
+                    </li>
+
+                    <li>
+                        Acompanhamento de resultados
+                    </li>
+
+                </ul>
+
+
+                <a
+                    href="https://wa.me/5500000000000?text=Olá!%20Quero%20conhecer%20o%20plano%20Premium%20da%20Flow."
+                    class="btn"
+                    target="_blank"
+                >
+                    Quero esse plano
+                </a>
+
+            </div>
+
+        </div>
+
+        <p style="
+            text-align:center;
+            color:#777;
+            font-size:12px;
+            margin-top:25px;
+        ">
+            * Investimento em mídia paga, quando contratado, é separado
+            da mensalidade de gestão.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     DIFERENCIAL
+========================= -->
+
+<section class="difference">
+
+    <div class="container">
+
+        <div class="difference-box">
+
+            <div class="section-label">
+                Por que a Flow?
+            </div>
+
+            <h2>
+                Sua empresa não precisa de
+                <span>mais posts.</span>
+                Precisa de direção.
+            </h2>
+
+            <p>
+                Na Flow Marketing, cada conteúdo faz parte de uma
+                estratégia maior. Nosso objetivo é fazer sua marca
+                se posicionar, criar conexão com o público e transformar
+                o Instagram em uma ferramenta de negócio.
+            </p>
+
+            <a
+                href="https://wa.me/5500000000000"
+                class="btn"
+                target="_blank"
+            >
+                Quero conversar com a Flow →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CTA FINAL
+========================= -->
+
+<section class="cta" id="contato">
+
+    <div class="container cta-content">
+
+        <div class="section-label">
+            Vamos começar?
+        </div>
+
+        <h2>
+            Seu Instagram pode ser mais do que uma vitrine.
+            <span>Pode ser uma ferramenta de vendas.</span>
+        </h2>
+
+        <p>
+            Fale com a Flow Marketing e descubra qual estratégia
+            faz sentido para o seu negócio.
+        </p>
+
+        <a
+            href="https://wa.me/5500000000000?text=Olá!%20Quero%20falar%20com%20a%20Flow%20Marketing."
+            class="btn"
+            target="_blank"
+        >
+            Falar com a Flow pelo WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <div class="logo">
+            Flow<span>.</span>
+        </div>
+
+        <div class="footer-text">
+            © 2026 Flow Marketing. Todos os direitos reservados.
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
